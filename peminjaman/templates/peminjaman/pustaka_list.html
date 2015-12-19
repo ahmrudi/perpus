@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<ul class="list-unstyled">
+{% for obj in object_list %}
+ <li>{{ obj.judul }}</li>
+{% empty %}
+ <li>No entry.</li>
+{% endfor %}
+</ul>
+{% endblock %}

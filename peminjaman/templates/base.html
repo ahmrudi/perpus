@@ -1,0 +1,42 @@
+<!DOCTYPE html>{% load staticfiles %}
+<html lang="{{ lang }}">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="{{ meta_keywords }}" >
+<meta name="description" content="{{ meta_description }}">
+<title>{% block head_title %}{{ site_name }}{% endblock head_title %}</title>
+<link href="{% static 'css/bootstrap.min.css' %}" media="screen" rel="stylesheet" />
+</head>
+<body>
+<div class="container body-header">
+	<div class="row">
+		<div class="judul">
+			[judul]
+		</div>
+		<div class="navigation">
+			[navigasi]		
+		</div>	
+	</div>
+</div>
+
+<div class="container body-content">
+	<div class="row">
+		<div class="sidebar-kanan">
+		[sidebar]
+		</div>
+		<div class="content">
+			{% block content %}{% endblock content %}
+		</div>
+	</div>
+</div>
+
+<div class="container body-footer">
+	<div class="row">
+		[footer]	
+	</div>
+</div>
+<script src="{% static 'js/bootstrap.min.js' %}" ></script>
+</body>
+</html>
